@@ -8,6 +8,8 @@ const port = 8888;
 const app = express();
 const compiler = webpack(config);
 
+/* eslint-disable no-console */
+
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true, // no info on command line
   publicPath: config.output.publicPath // public path declared in webpack.config
