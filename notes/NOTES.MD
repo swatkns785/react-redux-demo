@@ -56,3 +56,71 @@ When to use stateless functional components
 -Receive data and actions via props
 -Doesnt know about Redux
 -Typically functional components
+
+
+##Actions, Stores, and Reducers in Redux
+
+###Actions
+
+```js
+rateCourse(rating) {
+  return { type: RATE_COURSE, rating: rating }
+}
+```
+
+###Immutability
+**TO CHANGE STATE, RETURN A NEW OBJECT**
+
+Why?
+-Clarity, state is changed in a reducer
+-Performance
+-Improved debugging experience
+
+`Object.assign` or Spread operator in ES6
+
+###Reducers
+```js
+function myReducer(state, action) {
+  // Return new state based on action passed
+}
+
+function myReducer(state, action) {
+  switch (action.type) {
+    case 'INCREMENT_COUNTER':
+      return (Object.assign(
+        {},
+        state,
+        {counter: state.counter + 1}
+      ));
+  }
+}
+```
+
+####Forbidden in reducers
+-Mutate arguments
+-Perform side effects
+-Call non-pure functions
+
+
+##React-Redux Connection
+```js
+connect(mapStateToProps, mapDispatchToProps)
+```
+
+mapStateToProps === What state should I expose to props?
+```js
+function mapStateToProps(state) {
+  return {
+    appState: state
+  };
+}
+```
+
+mapDispatchToProps === what actions do I want on props?
+```js
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(actions, dispatch)
+  };
+}
+```
