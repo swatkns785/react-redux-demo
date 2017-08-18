@@ -1,0 +1,90 @@
+{
+  "name": "swatkns785/react-redux-demo",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "",
+  "branch": "",
+  "style": {
+    "name": "Future",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/BannerHeader",
+      "article": "article/BasicArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "\"Avenir Next\", Helvetica, sans-serif",
+    "heading": {
+      "fontWeight": 500,
+      "textTransform": "uppercase",
+      "letterSpacing": "0.2em"
+    },
+    "alternativeText": {
+      "textTransform": "uppercase",
+      "fontWeight": 400,
+      "letterSpacing": "0.2em",
+      "opacity": 0.75
+    },
+    "colors": {
+      "text": "#333",
+      "background": "#fff",
+      "primary": "#666",
+      "secondary": "#888",
+      "highlight": "#1f80ff",
+      "muted": "#f6f6f6",
+      "border": "#eee"
+    },
+    "layout": {
+      "centered": true,
+      "maxWidth": 1024,
+      "bannerHeight": "80vh"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/swatkns785/react-redux-demo",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/pluralsight-redux-starter",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "react-redux-demo",
+      "subhead": "first go at a react-redux application",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "react-redux-demo: first go at a react-redux application",
+          "url": null
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "swatkns785",
+          "repo": "react-redux-demo"
+        }
+      ],
+      "text": "v1.0.0"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/swatkns785/react-redux-demo",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/swatkns785",
+          "text": "swatkns785"
+        }
+      ]
+    }
+  ]
+}
